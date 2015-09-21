@@ -3,6 +3,20 @@ name = "base64"
 version = "0.1.0"
 authors = ["Nick Stevens <nick@bitcurry.com>"]
 
-[dependencies]
+description = """
+A heapless base64 encoder/decoder.
+"""
+
+repository = "https://github.com/nastevens/base64-noalloc"
+homepage = "https://github.com/nastevens/base64-noalloc"
+documentation = "http://nastevens.github.io/base64-noalloc/"
+readme = "README.md"
+
+keywords = ["base64", "encoder", "decoder", "no_std", "nostd", "core",
+            "heapless", "noheap", "noalloc"]
+
+license = "MIT"
+
+[dev-dependencies]
 fixedvec = "0.1.0"
 rand = "0.3.11"
