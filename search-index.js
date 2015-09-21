@@ -1,0 +1,3 @@
+var searchIndex = {};
+searchIndex['base64'] = {"items":[[0,"","base64","Heapless Base64 binary encoder and decoder, using only libcore",null,null],[3,"Base64Encoder","","",null,null],[3,"Base64Decoder","","",null,null],[6,"Base64Result","","",null,null],[11,"new","","Create a new Base64Encoder from the provided slice.",0,null],[11,"next","","",0,{"inputs":[{"name":"base64encoder"}],"output":{"name":"option"}}],[11,"new","","Create a new Base64Decoder from the provided slice.",1,null],[11,"status","","Check the decoder status for errors.",1,{"inputs":[{"name":"base64decoder"}],"output":{"name":"base64result"}}],[11,"next","","",1,{"inputs":[{"name":"base64decoder"}],"output":{"name":"option"}}]],"paths":[[3,"Base64Encoder"],[3,"Base64Decoder"]]};
+initSearch(searchIndex);
