@@ -1,0 +1,8 @@
+[package]
+name = "base64"
+version = "0.1.0"
+authors = ["Nick Stevens <nick@bitcurry.com>"]
+
+[dependencies]
+fixedvec = "0.1.0"
+rand = "0.3.11"
