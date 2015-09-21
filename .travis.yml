@@ -1,0 +1,23 @@
+language: rust
+rust:
+  - nightly
+
+script:
+  - cargo build --verbose
+  - cargo test --verbose
+  - cargo doc
+
+env:
+  global:
+    secure: "HVpy4gSHbL9ZA3i4kJ/XA/kORzW4Ouq+WC+F3ZcsuryiHOG5drljorq5csgSkJb1in4/t6dZWcuYWyNGRTZ0L2gtSw1KaLxXlkC7joUEGTO3fS0/CuG+JANN3yMrzd4I8g4j91BJVkKXVHHi4mjc6kUKZNPma8WnUPDH0wtHaU0="
+
+# Publish documentation on successful master build using the
+# ghp-import python package
+after_success: ! '[ $TRAVIS_BRANCH = master ] && [ $TRAVIS_PULL_REQUEST = false ]
+  && echo "<meta http-equiv=refresh content=0;url=base64/index.html>" > target/doc/index.html
+  && pip install --user ghp-import
+  && ghp-import -n target/doc
+  && git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages'
+
+# Use Travis container-based infrastructure
+sudo: false
